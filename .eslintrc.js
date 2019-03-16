@@ -5,7 +5,12 @@ module.exports = {
     es6: true,
     node: true
   },
-  extends: ["airbnb","prettier"],
+  // extends: ["airbnb","prettier"],
+  extends: ["prettier"],
+  // extends: [
+  //   "eslint:recommended",
+  //   "plugin:react/recommended"
+// ],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly"
@@ -14,7 +19,8 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 2018
+    ecmaVersion: 2018,
+    sourceType: "module"
   },
   plugins: ["react"],
   rules: {
@@ -23,5 +29,10 @@ module.exports = {
     "react/no-multi-comp":0,
     "react/destructuring-assignment":0,
     "prefer-destructuring":0
-  }
+  },
+  
+    // parser: "babel-eslint",
+    // "rules": {
+    // }
+  
 };

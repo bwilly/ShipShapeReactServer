@@ -1,6 +1,6 @@
 // import { React, ReactDOM } from "../node_modules/react-is";
-
-// import IssueTable from './IssueTable';
+import IssueTable from './IssueTable';
+// require('./IssueTable.jsx');
 
 const issues = [
   {
@@ -52,64 +52,7 @@ class SensorRow extends React.Component {
   }
 }
 
-class IssueRow2 extends React.Component {
-  render() {
-    const issue = this.props.issue;
-    return (
-      <tr>
-        {" "}
-        <td>{issue.id}</td> 
-        {' '}
-        <td>{issue.status}</td> 
-        {' '}
-        <td>{issue.owner}</td>
-        {" "}
-        <td>{issue.created.toDateString()}</td> 
-        {' '}
-        <td>{issue.effort}</td>
-        {" "}
-        <td>
-          {issue.completionDate ? issue.completionDate.toDateString() : ""}
-        </td>
-        {" "}
-        <td>{issue.title}</td>
-        {" "}
-      </tr>
-    );
-  }
-}
 
-class IssueTable2 extends React.Component {
-  render() {
-      const issueRows = this.props.issues.map(issue => (
-      <IssueRow2 key={issue.id} issue={issue} />
-      ));
-      return (
-      <table className="bordered-table">
-          {" "}
-          <thead>
-          {" "}
-          <tr>
-              {" "}
-              <th>Id</th>
-              <th>Status</th>
-              <th>Owner</th>
-              <th>Created</th> 
-              {' '}
-              <th>Effort</th>
-              <th>Completion Date</th>
-              <th>Title</th>
-              {" "}
-          </tr>
-          {" "}
-          </thead>
-          {" "}
-          <tbody>{issueRows}</tbody>
-          {" "}
-      </table>
-      );
-  }
-}
 
 const reactTable = document.getElementById("reactTable");
-ReactDOM.render(<IssueTable2 issues={issues} />, reactTable);
+ReactDOM.render(<IssueTable issues={issues} />, reactTable);

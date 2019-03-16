@@ -10,12 +10,13 @@
 </head>
 
 <body>
-    <div id="world"></div>
-    <div id="continents"></div>
-    <div id="reactTable"></div>
-    
-    <!-- <script src="/App.js"></script> pre-webpack when just compiling with babel -->
-    <script src="/app.bundle.js"></script>
+    <div id="contents"></div><!-- this is where our component will appear -->
+    <script type="text/babel">  
+        console.log("inside text/babel");
+        var contentNode = document.getElementById('contents'); 
+        var component = <h1>Hello World!</h1>;   // A simple JSX component 
+        ReactDOM.render(component, contentNode);  // Render the component inside the content Node 
+    </script>
 </body>
 
 </html>
