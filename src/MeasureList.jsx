@@ -1,9 +1,9 @@
 import MeasureRow from "./MeasureRow";
 
-export default class IssueTable extends React.Component {
+export default class MeasureList extends React.Component {
   render() {
-    const issueRows = this.props.issues.map(issue => (
-      <MeasureRow key={issue.id} issue={issue} />
+    const measureRows = this.props.measures.map(measure => (
+      <MeasureRow key={measure.id} measure={measure} />
     ));
     return (
       <table className="bordered-table">
@@ -12,15 +12,13 @@ export default class IssueTable extends React.Component {
           {" "}
           <tr>
             {" "}
-            <th>Id</th>
-            <th>Status</th>
+            <th>Id</th>            
             <th>Owner</th>
-            <th>Created</th> <th>Effort</th>
-            <th>Completion Date</th>
-            <th>Title</th>{" "}
+            <th>Created</th>
+            <th>Measure</th>
           </tr>{" "}
         </thead>{" "}
-        <tbody>{issueRows}</tbody>{" "}
+        <tbody>{measureRows}</tbody>{" "}
       </table>
     );
   }

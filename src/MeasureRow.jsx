@@ -1,24 +1,19 @@
 export default class MeasureRow extends React.Component {
     render() {
-      const issue = this.props.issue;
+      const measure = this.props.measure;
       return (
         <tr>
           {" "}
-          <td>{issue.id}</td> 
+          <td>{measure.id}</td> 
           {' '}
-          <td>{issue.status}</td> 
-          {' '}
-          <td>{issue.owner}</td>
+          <td>{measure.owner}</td>
           {" "}
-          <td>{issue.created.toDateString()}</td> 
-          {' '}
-          <td>{issue.effort}</td>
+          <td>{measure.created.toDateString()}</td> 
           {" "}
           <td>
-            {issue.completionDate ? issue.completionDate.toDateString() : ""}
+            {/* {issue.completionDate ? issue.completionDate.toDateString() : ""} */}
+            {measure.measureVal}
           </td>
-          {" "}
-          <td>{issue.title}</td>
           {" "}
         </tr>
       );
