@@ -1,10 +1,9 @@
-// import React from "react";
-import IssueRow from "./IssueRow";
+import MeasureRow from "./MeasureRow";
 
 export default class IssueTable extends React.Component {
   render() {
     const issueRows = this.props.issues.map(issue => (
-      <IssueRow key={issue.id} issue={issue} />
+      <MeasureRow key={issue.id} issue={issue} />
     ));
     return (
       <table className="bordered-table">

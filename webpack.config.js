@@ -5,7 +5,7 @@ const paths = require("path");
 module.exports = {
   mode: "development",
   context: __dirname + "/src",
-  entry: path.resolve("./src/App.jsx"),
+  entry: path.resolve("./src/AppClimateMeasures.jsx"),
   resolve: {
     extensions: [".js", ".jsx"]
   },

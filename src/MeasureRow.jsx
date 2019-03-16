@@ -1,6 +1,4 @@
-// import React from 'react';
-
-export default class IssueRow extends React.Component {
+export default class MeasureRow extends React.Component {
     render() {
       const issue = this.props.issue;
       return (
